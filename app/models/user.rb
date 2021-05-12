@@ -1,11 +1,15 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
+  has_many :attendances, dependent: :destroy
   before_save { self.email = email.downcase }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :name,  presence: true, length: { maximum: 50 }
   validates :email, presence: true, length: { maximum: 100 },
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: true
+                    validates :department, length: { in: 2..50 }, allow_blank: true
+                    validates :basic_time, presence: true	
+                    validates :work_time, presence: true
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
   
