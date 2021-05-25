@@ -5,15 +5,6 @@
 
 body {
   padding-top: 60px;
-  font-family: "Avenir Next";
-  font-size: 1.5em;
-  color: #000080;
-  
-}
-
-#logo:hover {
-  color: #808080;
-  text-decoration: none;
 }
 
 section {
@@ -30,6 +21,14 @@ textarea {
 
 .center h1 {
   margin-bottom: 10px;
+}
+
+.label-form {
+  margin-top: 5px;
+}
+
+.btn-form {
+  margin-top: 10px;
 }
 
 /* タイポグラフィ */
@@ -55,43 +54,47 @@ h2 {
 }
 
 p {
-  font-family: "Avenir Next";
   font-size: 1.1em;
   line-height: 1.7em;
-  
 }
 
 /* ヘッダー */
 
-li .header-List {
-  color: #fff;
-   font-weight: bold;
-}
-
-.headerList:hover {
-  color: #C0C0C0;
-  text-decoration: none;
-}
-
-#herder {
-  background-color: #008080;
+#header {
+  background-color: teal;
 }
 
 #logo {
   float: left;
   margin-right: 10px;
-  font-style: italic; /* イタリック体 */
-  font-size: 2.0em;
-  color: #ffffe0;
-  text-transform: uppercase;
-  letter-spacing: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  font-style: italic;
+  letter-spacing: -1px;
   padding-top: 9px;
-  font-weight: lighter;
+  font-weight: bold;
+  &:hover {
+    color: silver;
+    text-decoration: none;
+  }
 }
 
+li .header-list {
+  color: #fff !important;
+  font-weight: bold;
+  &:hover {
+    color: silver !important;
+  }
+}
 
+#dropdown-title {
+  background-color: teal;
+}
 
-
+li .dropdown-header {
+  background-color: rgba(200, 200, 200, 0.5);
+  font-weight: bold;
+}
 
 /* デバッグウインドウ */
 
